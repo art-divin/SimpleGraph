@@ -10,10 +10,12 @@
 		C99E2D262383488500553430 /* Drawable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2D1C2383488500553430 /* Drawable.framework */; };
 		C99E2D2B2383488500553430 /* DrawableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D2A2383488500553430 /* DrawableTests.swift */; };
 		C99E2D2D2383488500553430 /* Drawable.h in Headers */ = {isa = PBXBuildFile; fileRef = C99E2D1F2383488500553430 /* Drawable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C99E2D402383498500553430 /* Vertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D3F2383498500553430 /* Vertical.swift */; };
-		C99E2D422383499000553430 /* Horizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D412383498F00553430 /* Horizontal.swift */; };
+		C99E2D402383498500553430 /* VerticalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D3F2383498500553430 /* VerticalLine.swift */; };
+		C99E2D422383499000553430 /* HorizontalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D412383498F00553430 /* HorizontalLine.swift */; };
 		C99E2D442383499700553430 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D432383499700553430 /* Line.swift */; };
 		C99E2D4623834B7300553430 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D4523834B7300553430 /* TextLabel.swift */; };
+		C99E2D4823834D4100553430 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D4723834D4100553430 /* GridView.swift */; };
+		C99E2D4A23834DA100553430 /* GridModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2D4923834DA100553430 /* GridModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +35,12 @@
 		C99E2D252383488500553430 /* DrawableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrawableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99E2D2A2383488500553430 /* DrawableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawableTests.swift; sourceTree = "<group>"; };
 		C99E2D2C2383488500553430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C99E2D3F2383498500553430 /* Vertical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertical.swift; sourceTree = "<group>"; };
-		C99E2D412383498F00553430 /* Horizontal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Horizontal.swift; sourceTree = "<group>"; };
+		C99E2D3F2383498500553430 /* VerticalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalLine.swift; sourceTree = "<group>"; };
+		C99E2D412383498F00553430 /* HorizontalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalLine.swift; sourceTree = "<group>"; };
 		C99E2D432383499700553430 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		C99E2D4523834B7300553430 /* TextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
+		C99E2D4723834D4100553430 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		C99E2D4923834DA100553430 /* GridModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +85,12 @@
 			children = (
 				C99E2D1F2383488500553430 /* Drawable.h */,
 				C99E2D202383488500553430 /* Info.plist */,
-				C99E2D3F2383498500553430 /* Vertical.swift */,
-				C99E2D412383498F00553430 /* Horizontal.swift */,
+				C99E2D3F2383498500553430 /* VerticalLine.swift */,
+				C99E2D412383498F00553430 /* HorizontalLine.swift */,
 				C99E2D432383499700553430 /* Line.swift */,
 				C99E2D4523834B7300553430 /* TextLabel.swift */,
+				C99E2D4723834D4100553430 /* GridView.swift */,
+				C99E2D4923834DA100553430 /* GridModel.swift */,
 			);
 			path = Drawable;
 			sourceTree = "<group>";
@@ -209,9 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99E2D442383499700553430 /* Line.swift in Sources */,
-				C99E2D402383498500553430 /* Vertical.swift in Sources */,
-				C99E2D422383499000553430 /* Horizontal.swift in Sources */,
+				C99E2D402383498500553430 /* VerticalLine.swift in Sources */,
+				C99E2D422383499000553430 /* HorizontalLine.swift in Sources */,
+				C99E2D4823834D4100553430 /* GridView.swift in Sources */,
 				C99E2D4623834B7300553430 /* TextLabel.swift in Sources */,
+				C99E2D4A23834DA100553430 /* GridModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
