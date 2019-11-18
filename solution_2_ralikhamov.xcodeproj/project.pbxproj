@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C99E2D4E23835B8A00553430 /* Drawable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2D3C2383488600553430 /* Drawable.framework */; };
 		C9CB3B852383450800EC8844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B842383450800EC8844 /* AppDelegate.swift */; };
 		C9CB3B872383450800EC8844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B862383450800EC8844 /* SceneDelegate.swift */; };
 		C9CB3B892383450800EC8844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B882383450800EC8844 /* ViewController.swift */; };
@@ -31,6 +32,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = C99E2D252383488500553430;
 			remoteInfo = DrawableTests;
+		};
+		C99E2D4B23835B8600553430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99E2D362383488600553430 /* Drawable.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C99E2D1B2383488500553430;
+			remoteInfo = Drawable;
 		};
 		C9CB3B982383450A00EC8844 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -71,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99E2D4E23835B8A00553430 /* Drawable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +109,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C99E2D4D23835B8A00553430 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C9CB3B782383450800EC8844 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +124,7 @@
 				C9CB3B9A2383450A00EC8844 /* solution_2_ralikhamovTests */,
 				C9CB3BA52383450A00EC8844 /* solution_2_ralikhamovUITests */,
 				C9CB3B822383450800EC8844 /* Products */,
+				C99E2D4D23835B8A00553430 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +184,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C99E2D4C23835B8600553430 /* PBXTargetDependency */,
 			);
 			name = solution_2_ralikhamov;
 			productName = solution_2_ralikhamov;
@@ -332,6 +350,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C99E2D4C23835B8600553430 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Drawable;
+			targetProxy = C99E2D4B23835B8600553430 /* PBXContainerItemProxy */;
+		};
 		C9CB3B992383450A00EC8844 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9CB3B802383450800EC8844 /* solution_2_ralikhamov */;

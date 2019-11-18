@@ -11,9 +11,9 @@ import UIKit
 /**
  * This class draws `VerticalLine` and `HorizontalLine` according to the given `GridModel` object
  */
-class GridView : UIView {
+public class GridView : UIView {
     
-    var model : GridModel?
+    public var model : GridModel?
     
     private var verticalLines : [VerticalLine] = []
     private var horizontalLines : [HorizontalLine] = []
@@ -27,7 +27,7 @@ class GridView : UIView {
         super.init(coder: coder)
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         self.prepareForDrawing()
         self.drawLines()
@@ -59,8 +59,8 @@ class GridView : UIView {
         
         // TODO: move to another func
         let linesWidth = CGFloat(1 * self.verticalLines.count)
-        let horizontalPadding = self.frame.height / CGFloat(self.verticalLines.count) - linesWidth
-        let verticalPadding = self.frame.width / CGFloat(self.horizontalLines.count) - linesWidth
+        let horizontalPadding = ceil(self.frame.height / CGFloat(self.verticalLines.count) - linesWidth)
+        let verticalPadding = ceil(self.frame.width / CGFloat(self.horizontalLines.count) - linesWidth)
         
         // TODO: make more abstract to "draw" any collection
         self.verticalLines.forEach {
@@ -75,8 +75,8 @@ class GridView : UIView {
         self.horizontalLines.forEach {
             let x : CGFloat = 0.0
             let y = horizontalPadding * CGFloat(max($0.position, 1))
-            let width : CGFloat = 1.0
-            let height = self.frame.height
+            let width = self.frame.width
+            let height : CGFloat = 1.0
             $0.frame = CGRect(x: x, y: y, width: width, height: height)
             $0.setupShapeLayer()
         }

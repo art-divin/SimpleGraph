@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Drawable
 
 class ViewController: UIViewController {
 
+    @IBOutlet var gridView : GridView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        let model = GridModel(horizontal: ["1", "2", "3", "4"], vertical: ["a", "b", "c", "d", "e", "f"])
+        self.gridView?.model = model
     }
 
 
