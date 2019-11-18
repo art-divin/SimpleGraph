@@ -18,6 +18,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C99E2D3B2383488600553430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99E2D362383488600553430 /* Drawable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C99E2D1C2383488500553430;
+			remoteInfo = Drawable;
+		};
+		C99E2D3D2383488600553430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99E2D362383488600553430 /* Drawable.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C99E2D252383488500553430;
+			remoteInfo = DrawableTests;
+		};
 		C9CB3B982383450A00EC8844 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9CB3B792383450800EC8844 /* Project object */;
@@ -35,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C99E2D362383488600553430 /* Drawable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Drawable.xcodeproj; path = Drawable/Drawable.xcodeproj; sourceTree = "<group>"; };
 		C9CB3B812383450800EC8844 /* solution_2_ralikhamov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solution_2_ralikhamov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CB3B842383450800EC8844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9CB3B862383450800EC8844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +91,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C99E2D372383488600553430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C99E2D3C2383488600553430 /* Drawable.framework */,
+				C99E2D3E2383488600553430 /* DrawableTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C9CB3B782383450800EC8844 = {
 			isa = PBXGroup;
 			children = (
+				C99E2D362383488600553430 /* Drawable.xcodeproj */,
 				C9CB3B832383450800EC8844 /* solution_2_ralikhamov */,
 				C9CB3B9A2383450A00EC8844 /* solution_2_ralikhamovTests */,
 				C9CB3BA52383450A00EC8844 /* solution_2_ralikhamovUITests */,
@@ -218,6 +243,12 @@
 			mainGroup = C9CB3B782383450800EC8844;
 			productRefGroup = C9CB3B822383450800EC8844 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C99E2D372383488600553430 /* Products */;
+					ProjectRef = C99E2D362383488600553430 /* Drawable.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C9CB3B802383450800EC8844 /* solution_2_ralikhamov */,
@@ -226,6 +257,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C99E2D3C2383488600553430 /* Drawable.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Drawable.framework;
+			remoteRef = C99E2D3B2383488600553430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C99E2D3E2383488600553430 /* DrawableTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = DrawableTests.xctest;
+			remoteRef = C99E2D3D2383488600553430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C9CB3B7F2383450800EC8844 /* Resources */ = {
