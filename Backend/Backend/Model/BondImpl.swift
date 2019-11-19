@@ -7,3 +7,13 @@
 //
 
 import Interfaces
+
+class BondImpl : Bond {
+    
+    var identifier: String
+    
+    required init(identifier: String) {
+        self.identifier = identifier
+    }
+    
+}

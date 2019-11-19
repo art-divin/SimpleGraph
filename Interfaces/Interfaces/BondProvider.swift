@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol BondProvider {
+public protocol BondProvider : Provider {
     
     func bonds(completion: @escaping ([Bond]) -> Void)
     func bondData(_ bond: Bond, completion: @escaping ([BondData]) -> Void)

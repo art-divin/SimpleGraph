@@ -12,10 +12,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window : UIWindow?
+    var combiner : Combiner?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.setupCombiner()
         return true
+    }
+    
+}
+
+extension AppDelegate {
+    
+    private func setupCombiner() {
+        self.combiner = Combiner()
+        self.combiner?.combine()
     }
 
 }

@@ -12,8 +12,11 @@
 		C99E2DDB238439D200553430 /* ThemeBlue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2DDA238439D200553430 /* ThemeBlue.swift */; };
 		C99E2E2523844F3B00553430 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2E2223844F3200553430 /* Backend.framework */; };
 		C99E2E2623844F3B00553430 /* Backend.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2E2223844F3200553430 /* Backend.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C99E2E6523845F7000553430 /* Combiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E6423845F7000553430 /* Combiner.swift */; };
+		C99E2E6A238461B900553430 /* NSObject+Combiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E69238461B900553430 /* NSObject+Combiner.swift */; };
+		C99E2E7E2384698800553430 /* BondListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E7C2384698800553430 /* BondListViewController.swift */; };
+		C99E2E7F2384698800553430 /* BondDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E7D2384698800553430 /* BondDataViewController.swift */; };
 		C9CB3B852383450800EC8844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B842383450800EC8844 /* AppDelegate.swift */; };
-		C9CB3B892383450800EC8844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B882383450800EC8844 /* ViewController.swift */; };
 		C9CB3B8C2383450800EC8844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CB3B8A2383450800EC8844 /* Main.storyboard */; };
 		C9CB3B8E2383450900EC8844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CB3B8D2383450900EC8844 /* Assets.xcassets */; };
 		C9CB3B912383450900EC8844 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CB3B8F2383450900EC8844 /* LaunchScreen.storyboard */; };
@@ -107,9 +110,12 @@
 		C99E2DDA238439D200553430 /* ThemeBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBlue.swift; sourceTree = "<group>"; };
 		C99E2E1C23844F3100553430 /* Backend.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Backend.xcodeproj; path = Backend/Backend.xcodeproj; sourceTree = "<group>"; };
 		C99E2E4D23844FDB00553430 /* Interfaces.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Interfaces.xcodeproj; path = Interfaces/Interfaces.xcodeproj; sourceTree = "<group>"; };
+		C99E2E6423845F7000553430 /* Combiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Combiner.swift; sourceTree = "<group>"; };
+		C99E2E69238461B900553430 /* NSObject+Combiner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Combiner.swift"; sourceTree = "<group>"; };
+		C99E2E7C2384698800553430 /* BondListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondListViewController.swift; sourceTree = "<group>"; };
+		C99E2E7D2384698800553430 /* BondDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BondDataViewController.swift; sourceTree = "<group>"; };
 		C9CB3B812383450800EC8844 /* solution_2_ralikhamov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solution_2_ralikhamov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CB3B842383450800EC8844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9CB3B882383450800EC8844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9CB3B8B2383450800EC8844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9CB3B8D2383450900EC8844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9CB3B902383450900EC8844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 		C99E2DD8238439C700553430 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C99E2E7B2384698800553430 /* ViewControllers */,
+				C99E2E68238461AD00553430 /* Extensions */,
 				C99E2DD9238439C700553430 /* Theme */,
 			);
 			path = Classes;
@@ -199,6 +207,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C99E2E68238461AD00553430 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C99E2E69238461B900553430 /* NSObject+Combiner.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C99E2E7B2384698800553430 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C99E2E7C2384698800553430 /* BondListViewController.swift */,
+				C99E2E7D2384698800553430 /* BondDataViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		C9CB3B782383450800EC8844 = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +253,7 @@
 			children = (
 				C99E2DD8238439C700553430 /* Classes */,
 				C9CB3B842383450800EC8844 /* AppDelegate.swift */,
-				C9CB3B882383450800EC8844 /* ViewController.swift */,
+				C99E2E6423845F7000553430 /* Combiner.swift */,
 				C9CB3B8A2383450800EC8844 /* Main.storyboard */,
 				C9CB3B8D2383450900EC8844 /* Assets.xcassets */,
 				C9CB3B8F2383450900EC8844 /* LaunchScreen.storyboard */,
@@ -447,8 +472,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99E2E7E2384698800553430 /* BondListViewController.swift in Sources */,
+				C99E2E6523845F7000553430 /* Combiner.swift in Sources */,
 				C99E2DDB238439D200553430 /* ThemeBlue.swift in Sources */,
-				C9CB3B892383450800EC8844 /* ViewController.swift in Sources */,
+				C99E2E7F2384698800553430 /* BondDataViewController.swift in Sources */,
+				C99E2E6A238461B900553430 /* NSObject+Combiner.swift in Sources */,
 				C9CB3B852383450800EC8844 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

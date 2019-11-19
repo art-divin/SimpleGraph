@@ -8,13 +8,16 @@
 
 import Interfaces
 
-class Backend : BondProvider {
+public class Backend : BondProvider {
     
-    func bonds(completion: @escaping ([Bond]) -> Void) {
+    public init() {
+    }
+    
+    public func bonds(completion: @escaping ([Bond]) -> Void) {
         
     }
     
-    func bondData(_ bond: Bond, completion: @escaping ([BondData]) -> Void) {
+    public func bondData(_ bond: Bond, completion: @escaping ([BondData]) -> Void) {
     }
     
 }
