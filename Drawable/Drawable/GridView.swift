@@ -36,39 +36,25 @@ public class GridView : UIView {
         guard let model = self.model else {
             fatalError("self.model was not set!")
         }
-        // TODO: encapsulate within GridModel
-        for (idx, text) in model.vertical.enumerated() {
-            let line = VerticalLine(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
-            line.textLabel.text = text
-            line.position = idx
-            self.verticalLines.append(line)
-        }
-        for (idx, text) in model.horizontal.enumerated() {
-            let line = HorizontalLine(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height))
-            line.textLabel.text = text
-            line.position = idx
-            self.horizontalLines.append(line)
+        self.verticalLines.append(contentsOf: model.verticalLines)
+        self.horizontalLines.append(contentsOf: model.horizontalLines)
+        self.verticalLines.forEach { self.addSubview($0) }
+        self.horizontalLines.forEach { self.addSubview($0) }
+    }
+    
+    private func drawLines(_ lines: [Line], padding: CGFloat) {
+        lines.forEach {
+            $0.adjustFrame(padding: padding)
+            $0.setNeedsDisplay()
         }
     }
     
     func drawLines() {
-        // TODO: move to another func
-        self.verticalLines.forEach { self.addSubview($0) }
-        self.horizontalLines.forEach { self.addSubview($0) }
-        
         let horizontalPadding : CGFloat = ceil(self.frame.width / CGFloat(self.verticalLines.count))
         let verticalPadding : CGFloat = ceil(self.frame.height / CGFloat(self.horizontalLines.count))
-        
-        // TODO: make more abstract to "draw" any collection
-        self.verticalLines.forEach {
-            $0.adjustFrame(padding: horizontalPadding)
-            $0.setNeedsDisplay()
-        }
-        
-        self.horizontalLines.forEach {
-            $0.adjustFrame(padding: verticalPadding)
-            $0.setNeedsDisplay()
-        }
+
+        self.drawLines(self.verticalLines, padding: horizontalPadding)
+        self.drawLines(self.horizontalLines, padding: verticalPadding)
     }
     
 }
