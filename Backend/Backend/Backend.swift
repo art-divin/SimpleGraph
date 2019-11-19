@@ -25,7 +25,7 @@ public class Backend : BondProvider {
         }
     }
     
-    public func bondData(_ bond: Bond, completion: @escaping ([BondData]) -> Void) {
+    public func bondData(_ bond: Bond, span: Int, completion: @escaping ([BondData]) -> Void) {
         var data : [BondData] = []
         // TODO: put to data generator
         var dateComps = NSCalendar.current.dateComponents(in: TimeZone.current, from: Date())

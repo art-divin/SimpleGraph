@@ -11,6 +11,6 @@ import Foundation
 public protocol BondProvider : Provider {
     
     func bonds(completion: @escaping ([Bond]) -> Void)
-    func bondData(_ bond: Bond, completion: @escaping ([BondData]) -> Void)
+    func bondData(_ bond: Bond, span: Int, completion: @escaping ([BondData]) -> Void)
     
 }
