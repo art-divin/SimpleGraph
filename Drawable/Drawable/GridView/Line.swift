@@ -54,13 +54,9 @@ class Line : UIView {
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let maxPoint = self.maxPoint
-        let path = CGMutablePath()
-        path.move(to: self.minPoint)
-        path.addLine(to: maxPoint)
-        path.closeSubpath()
-        context?.addPath(path)
-        context?.setStrokeColor(UIColor.black.cgColor)
-        context?.strokePath()
+        context?.move(to: self.minPoint)
+        context?.addLine(to: maxPoint)
+        context?.drawPath(using: .fillStroke)
     }
 
 }

@@ -20,10 +20,10 @@ class TextLabel : UILabel {
     }
     
     func setup() {
-        self.font = UIFont.boldSystemFont(ofSize: 14)
-        self.textColor = UIColor.black
+        self.font = UIView.theme.titleFont
+        self.textColor = UIView.theme.titleColor
         self.textAlignment = .center
-        self.backgroundColor = UIColor.gray
+        self.backgroundColor = UIView.theme.backgroundColor
     }
     
     func adjustDirection(direction: Line.Direction) {

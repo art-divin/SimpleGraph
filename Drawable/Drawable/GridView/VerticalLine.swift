@@ -20,6 +20,7 @@ class VerticalLine : Line {
         let y : CGFloat = 0.0
         let width : CGFloat = 1.0
         let height = self.frame.height
+        self.backgroundColor = UIView.theme.lineColor
         self.frame = CGRect(x: x, y: y, width: width, height: height)
     }
     

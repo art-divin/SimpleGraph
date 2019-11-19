@@ -57,6 +57,20 @@
 			remoteGlobalIDString = C99E2E0B23844F3100553430;
 			remoteInfo = BackendTests;
 		};
+		C99E2E5223844FDB00553430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99E2E4D23844FDB00553430 /* Interfaces.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C99E2E3323844FD100553430;
+			remoteInfo = Interfaces;
+		};
+		C99E2E5423844FDB00553430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C99E2E4D23844FDB00553430 /* Interfaces.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C99E2E3C23844FD100553430;
+			remoteInfo = InterfacesTests;
+		};
 		C9CB3B982383450A00EC8844 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C9CB3B792383450800EC8844 /* Project object */;
@@ -92,6 +106,7 @@
 		C99E2D362383488600553430 /* Drawable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Drawable.xcodeproj; path = Drawable/Drawable.xcodeproj; sourceTree = "<group>"; };
 		C99E2DDA238439D200553430 /* ThemeBlue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeBlue.swift; sourceTree = "<group>"; };
 		C99E2E1C23844F3100553430 /* Backend.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Backend.xcodeproj; path = Backend/Backend.xcodeproj; sourceTree = "<group>"; };
+		C99E2E4D23844FDB00553430 /* Interfaces.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Interfaces.xcodeproj; path = Interfaces/Interfaces.xcodeproj; sourceTree = "<group>"; };
 		C9CB3B812383450800EC8844 /* solution_2_ralikhamov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solution_2_ralikhamov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CB3B842383450800EC8844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9CB3B882383450800EC8844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,9 +190,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		C99E2E4E23844FDB00553430 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C99E2E5323844FDB00553430 /* Interfaces.framework */,
+				C99E2E5523844FDB00553430 /* InterfacesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C9CB3B782383450800EC8844 = {
 			isa = PBXGroup;
 			children = (
+				C99E2E4D23844FDB00553430 /* Interfaces.xcodeproj */,
 				C99E2E1C23844F3100553430 /* Backend.xcodeproj */,
 				C99E2D362383488600553430 /* Drawable.xcodeproj */,
 				C9CB3B832383450800EC8844 /* solution_2_ralikhamov */,
@@ -331,6 +356,10 @@
 					ProductGroup = C99E2D372383488600553430 /* Products */;
 					ProjectRef = C99E2D362383488600553430 /* Drawable.xcodeproj */;
 				},
+				{
+					ProductGroup = C99E2E4E23844FDB00553430 /* Products */;
+					ProjectRef = C99E2E4D23844FDB00553430 /* Interfaces.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -368,6 +397,20 @@
 			fileType = wrapper.cfbundle;
 			path = BackendTests.xctest;
 			remoteRef = C99E2E2323844F3200553430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C99E2E5323844FDB00553430 /* Interfaces.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Interfaces.framework;
+			remoteRef = C99E2E5223844FDB00553430 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C99E2E5523844FDB00553430 /* InterfacesTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InterfacesTests.xctest;
+			remoteRef = C99E2E5423844FDB00553430 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
