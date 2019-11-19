@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C99E2D4E23835B8A00553430 /* Drawable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2D3C2383488600553430 /* Drawable.framework */; };
+		C99E2DC12384199F00553430 /* Drawable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2D3C2383488600553430 /* Drawable.framework */; };
+		C99E2DC22384199F00553430 /* Drawable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2D3C2383488600553430 /* Drawable.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C9CB3B852383450800EC8844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B842383450800EC8844 /* AppDelegate.swift */; };
-		C9CB3B872383450800EC8844 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B862383450800EC8844 /* SceneDelegate.swift */; };
 		C9CB3B892383450800EC8844 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B882383450800EC8844 /* ViewController.swift */; };
 		C9CB3B8C2383450800EC8844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CB3B8A2383450800EC8844 /* Main.storyboard */; };
 		C9CB3B8E2383450900EC8844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CB3B8D2383450900EC8844 /* Assets.xcassets */; };
@@ -56,11 +56,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C99E2DC32384199F00553430 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C99E2DC22384199F00553430 /* Drawable.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C99E2D362383488600553430 /* Drawable.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Drawable.xcodeproj; path = Drawable/Drawable.xcodeproj; sourceTree = "<group>"; };
 		C9CB3B812383450800EC8844 /* solution_2_ralikhamov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = solution_2_ralikhamov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CB3B842383450800EC8844 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9CB3B862383450800EC8844 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C9CB3B882383450800EC8844 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9CB3B8B2383450800EC8844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9CB3B8D2383450900EC8844 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C99E2D4E23835B8A00553430 /* Drawable.framework in Frameworks */,
+				C99E2DC12384199F00553430 /* Drawable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +155,6 @@
 			isa = PBXGroup;
 			children = (
 				C9CB3B842383450800EC8844 /* AppDelegate.swift */,
-				C9CB3B862383450800EC8844 /* SceneDelegate.swift */,
 				C9CB3B882383450800EC8844 /* ViewController.swift */,
 				C9CB3B8A2383450800EC8844 /* Main.storyboard */,
 				C9CB3B8D2383450900EC8844 /* Assets.xcassets */,
@@ -180,6 +192,7 @@
 				C9CB3B7D2383450800EC8844 /* Sources */,
 				C9CB3B7E2383450800EC8844 /* Frameworks */,
 				C9CB3B7F2383450800EC8844 /* Resources */,
+				C99E2DC32384199F00553430 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,7 +340,6 @@
 			files = (
 				C9CB3B892383450800EC8844 /* ViewController.swift in Sources */,
 				C9CB3B852383450800EC8844 /* AppDelegate.swift in Sources */,
-				C9CB3B872383450800EC8844 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +520,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WP7B8WJ8Z;
 				INFOPLIST_FILE = solution_2_ralikhamov/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9WP7B8WJ8Z;
 				INFOPLIST_FILE = solution_2_ralikhamov/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

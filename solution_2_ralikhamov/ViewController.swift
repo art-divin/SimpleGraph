@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let model = GridModel(horizontal: ["1", "2", "3", "4"], vertical: ["a", "b", "c", "d", "e", "f"])
+        let model = GridModel(horizontal: ["1","2","3"], vertical: ["a", "b", "c", "d", "e", "f", "g"])
         self.gridView?.model = model
     }
 
