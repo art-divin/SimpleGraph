@@ -24,24 +24,23 @@ public class GridModel {
         self.vertical = vertical
     }
     
-    private func construct<Drawable: Line>(from: [String], drawable: Drawable.Type) -> [Line] {
+    private func construct<Drawable: Line>(from: [String], frame: CGRect, drawable: Drawable.Type) -> [Line] {
         var retVal : [Line] = []
         for (idx, text) in from.enumerated() {
-            if let line = drawable.init(coder: NSCoder()) {
-                line.textLabel.text = text
-                line.position = idx
-                retVal.append(line)
-            }
+            let line = drawable.init(frame: frame)
+            line.textLabel.text = text
+            line.position = idx
+            retVal.append(line)
         }
         return retVal
     }
     
-    var horizontalLines : [HorizontalLine] {
-        return self.construct(from: self.horizontal, drawable: HorizontalLine.self) as? [HorizontalLine] ?? []
+    func horizontalLines(frame: CGRect) -> [HorizontalLine] {
+        return self.construct(from: self.horizontal, frame: frame, drawable: HorizontalLine.self) as? [HorizontalLine] ?? []
     }
     
-    var verticalLines : [VerticalLine] {
-        return self.construct(from: self.vertical, drawable: VerticalLine.self) as? [VerticalLine] ?? []
+    func verticalLines(frame: CGRect) -> [VerticalLine] {
+        return self.construct(from: self.vertical, frame: frame, drawable: VerticalLine.self) as? [VerticalLine] ?? []
     }
 
     /// adjusts objects within `horizontal` and `vertical` to fit into `GridView` limitations

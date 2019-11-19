@@ -15,12 +15,12 @@ class HorizontalLine : Line {
     }
     
     override func adjustFrame(padding: CGFloat) {
-        super.adjustFrame(padding: padding)
         let x : CGFloat = 0.0
         let y = padding * 0.5 + CGFloat(self.position) * padding
         let width = self.frame.width
         let height : CGFloat = 1.0
         self.frame = CGRect(x: x, y: y, width: width, height: height)
+        super.adjustFrame(padding: padding)
     }
     
     override var minPoint: CGPoint {

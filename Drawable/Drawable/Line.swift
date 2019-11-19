@@ -10,7 +10,7 @@ import UIKit
 
 class Line : UIView {
     
-    lazy var textLabel : UILabel = {
+    lazy var textLabel : TextLabel = {
         return TextLabel(frame: self.textFrame)
     }()
     
@@ -30,13 +30,13 @@ class Line : UIView {
     
     var position : Int = 0
     
-    override init(frame: CGRect) {
+    required override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(self.textLabel)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("uninitialized!")
+        fatalError("override in subclass!")
     }
     
     var minPoint : CGPoint {
@@ -48,14 +48,14 @@ class Line : UIView {
     }
     
     func adjustFrame(padding: CGFloat) {
-        self.textLabel.center = self.direction == .some(.horizontal) ? self.minPoint : self.maxPoint
+        self.textLabel.adjustDirection(direction: self.direction)
     }
     
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let maxPoint = self.maxPoint
         let path = CGMutablePath()
-        path.move(to: minPoint)
+        path.move(to: self.minPoint)
         path.addLine(to: maxPoint)
         path.closeSubpath()
         context?.addPath(path)

@@ -13,7 +13,11 @@ import UIKit
  */
 public class GridView : UIView {
     
-    public var model : GridModel?
+    public var model : GridModel? {
+        didSet {
+            self.prepareForDrawing()
+        }
+    }
     
     private var verticalLines : [VerticalLine] = []
     private var horizontalLines : [HorizontalLine] = []
@@ -36,8 +40,8 @@ public class GridView : UIView {
         guard let model = self.model else {
             fatalError("self.model was not set!")
         }
-        self.verticalLines.append(contentsOf: model.verticalLines)
-        self.horizontalLines.append(contentsOf: model.horizontalLines)
+        self.verticalLines.append(contentsOf: model.verticalLines(frame: self.frame))
+        self.horizontalLines.append(contentsOf: model.horizontalLines(frame: self.frame))
         self.verticalLines.forEach { self.addSubview($0) }
         self.horizontalLines.forEach { self.addSubview($0) }
     }
