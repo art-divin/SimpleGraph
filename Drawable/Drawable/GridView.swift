@@ -29,7 +29,6 @@ public class GridView : UIView {
     
     override public func layoutSubviews() {
         super.layoutSubviews()
-        self.prepareForDrawing()
         self.drawLines()
     }
     
@@ -57,28 +56,18 @@ public class GridView : UIView {
         self.verticalLines.forEach { self.addSubview($0) }
         self.horizontalLines.forEach { self.addSubview($0) }
         
-        // TODO: move to another func
-        let linesWidth = CGFloat(1 * self.verticalLines.count)
-        let horizontalPadding = ceil(self.frame.height / CGFloat(self.verticalLines.count) - linesWidth)
-        let verticalPadding = ceil(self.frame.width / CGFloat(self.horizontalLines.count) - linesWidth)
+        let horizontalPadding : CGFloat = ceil(self.frame.width / CGFloat(self.verticalLines.count))
+        let verticalPadding : CGFloat = ceil(self.frame.height / CGFloat(self.horizontalLines.count))
         
         // TODO: make more abstract to "draw" any collection
         self.verticalLines.forEach {
-            let x = verticalPadding * CGFloat(max($0.position, 1))
-            let y : CGFloat = 0.0
-            let width : CGFloat = 1.0
-            let height = self.frame.height
-            $0.frame = CGRect(x: x, y: y, width: width, height: height)
-            $0.setupShapeLayer()
+            $0.adjustFrame(padding: horizontalPadding)
+            $0.setNeedsDisplay()
         }
         
         self.horizontalLines.forEach {
-            let x : CGFloat = 0.0
-            let y = horizontalPadding * CGFloat(max($0.position, 1))
-            let width = self.frame.width
-            let height : CGFloat = 1.0
-            $0.frame = CGRect(x: x, y: y, width: width, height: height)
-            $0.setupShapeLayer()
+            $0.adjustFrame(padding: verticalPadding)
+            $0.setNeedsDisplay()
         }
     }
     

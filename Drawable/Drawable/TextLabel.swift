@@ -22,6 +22,7 @@ class TextLabel : UILabel {
     func setup() {
         self.font = UIFont.boldSystemFont(ofSize: 12)
         self.textColor = UIColor.lightGray
+        self.textAlignment = .center
     }
     
 }

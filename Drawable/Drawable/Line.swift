@@ -14,8 +14,6 @@ class Line : UIView {
         return TextLabel(frame: self.textFrame)
     }()
     
-    var shapeLayer : CAShapeLayer?
-    
     enum Direction {
         case horizontal
         case vertical
@@ -34,28 +32,35 @@ class Line : UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.addSubview(self.textLabel)
     }
     
     required init?(coder: NSCoder) {
         fatalError("uninitialized!")
     }
     
-    func setupShapeLayer() {
-        if let shapeLayer = self.shapeLayer {
-            shapeLayer.removeFromSuperlayer()
-        }
-        let minPoint = CGPoint(x: self.frame.minX, y: self.frame.minY)
-        let maxPoint = CGPoint(x: self.frame.maxX, y: self.frame.maxY)
+    var minPoint : CGPoint {
+        fatalError("override in subclass!")
+    }
+    
+    var maxPoint : CGPoint {
+        fatalError("override in subclass!")
+    }
+    
+    func adjustFrame(padding: CGFloat) {
+        self.textLabel.center = self.direction == .some(.horizontal) ? self.minPoint : self.maxPoint
+    }
+    
+    override func draw(_ rect: CGRect) {
+        let context = UIGraphicsGetCurrentContext()
+        let maxPoint = self.maxPoint
         let path = CGMutablePath()
         path.move(to: minPoint)
         path.addLine(to: maxPoint)
-        
-        let layer = CAShapeLayer()
-        layer.strokeColor = UIColor.black.cgColor
-        layer.lineWidth = 1
-        layer.path = path
-        self.shapeLayer = layer
-        self.layer.addSublayer(layer)
+        path.closeSubpath()
+        context?.addPath(path)
+        context?.setStrokeColor(UIColor.black.cgColor)
+        context?.strokePath()
     }
-    
+
 }
