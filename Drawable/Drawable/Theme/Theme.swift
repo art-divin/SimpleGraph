@@ -34,15 +34,17 @@ public protocol Theme {
     var titleFont : UIFont { get }
     var buttonTitleFont : UIFont { get }
     var backgroundColor : UIColor { get }
-    var lineColor : UIColor { get }
+    var systemLineColor : UIColor { get }
+    var curveLineColor : UIColor { get }
     
 }
 
 class ThemeDefault : Theme {
     
     var titleColor : UIColor { return UIColor.black }
-    var backgroundColor : UIColor { return UIColor.lightGray }
-    var lineColor: UIColor { return .black }
+    var backgroundColor : UIColor { return UIColor.clear }
+    var systemLineColor: UIColor { return .black }
+    var curveLineColor : UIColor { return .red }
     
     var buttonTitleColor : UIColor { return UIColor.black }
     var buttonSelectedColor : UIColor { return UIColor.magenta }

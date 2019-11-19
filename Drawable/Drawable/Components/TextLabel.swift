@@ -24,6 +24,7 @@ class TextLabel : UILabel {
         self.textColor = UIView.theme.titleColor
         self.textAlignment = .center
         self.backgroundColor = UIView.theme.backgroundColor
+        self.adjustsFontSizeToFitWidth = true
     }
     
     func adjustDirection(direction: Line.Direction) {

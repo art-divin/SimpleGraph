@@ -17,7 +17,8 @@ class ThemeBlue : Theme {
     var buttonHighlightedColor: UIColor { self.buttonSelectedColor }
     var titleFont: UIFont { return .boldSystemFont(ofSize: 14) }
     var buttonTitleFont: UIFont { return .boldSystemFont(ofSize: 15) }
-    var backgroundColor: UIColor { return .white }
-    var lineColor: UIColor { return .init(red: 233/255.0, green: 233/255.0, blue: 233/255.0, alpha: 1.0) }
+    var backgroundColor: UIColor { return .clear }
+    var systemLineColor: UIColor { return .init(red: 233/255.0, green: 233/255.0, blue: 233/255.0, alpha: 1.0) }
+    var curveLineColor: UIColor { return .init(red: 250/255.0, green: 113/255.0, blue: 131/255.0, alpha: 1.0) }
     
 }

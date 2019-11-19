@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Interfaces
 
 /**
  * This class represents data model for drawing `GridView`
@@ -14,18 +15,31 @@ import UIKit
 public class GridModel {
     
     /// can hold any number of horizontal objects
-    private var horizontal : [String]
+    private var horizontal : [String] = []
     
     /// can hold any number of vertical objects
-    private var vertical : [String]
+    private var vertical : [String] = []
     
-    public init(horizontal: [String], vertical: [String]) {
-        self.horizontal = horizontal
-        self.vertical = vertical
+    private var bondData : [BondData]
+    
+    var max : Double = 0.0
+    
+    public init(bondData: [BondData]) {
+        self.bondData = bondData
+        self.processData()
     }
     
-    private func construct<Drawable: Line>(from: [String], frame: CGRect, drawable: Drawable.Type) -> [Line] {
-        var retVal : [Line] = []
+    private func processData() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM"
+        self.vertical = self.bondData.map { dateFormatter.string(from: $0.date) }
+        let sorted = Array(Set(self.bondData.map { $0.value })).sorted(by: { $0 > $1 })
+        self.horizontal = sorted.map { "\($0)" }
+        self.max = sorted.first ?? 0.0
+    }
+
+    private func construct<Drawable: Line>(from: [String], frame: CGRect, drawable: Drawable.Type) -> [Drawable] {
+        var retVal : [Drawable] = []
         for (idx, text) in from.enumerated() {
             let line = drawable.init(frame: frame)
             line.textLabel.text = text
@@ -36,15 +50,15 @@ public class GridModel {
     }
     
     func horizontalLines(frame: CGRect) -> [HorizontalLine] {
-        return self.construct(from: self.horizontal, frame: frame, drawable: HorizontalLine.self) as? [HorizontalLine] ?? []
+        return self.construct(from: self.horizontal, frame: frame, drawable: HorizontalLine.self)
     }
     
     func verticalLines(frame: CGRect) -> [VerticalLine] {
-        return self.construct(from: self.vertical, frame: frame, drawable: VerticalLine.self) as? [VerticalLine] ?? []
-    }
-
-    /// adjusts objects within `horizontal` and `vertical` to fit into `GridView` limitations
-    func reduce() {
+        let lines = self.construct(from: self.vertical, frame: frame, drawable: VerticalLine.self)
+        for (idx, line) in lines.enumerated() {
+            line.value = self.bondData[idx].value
+        }
+        return lines
     }
     
 }

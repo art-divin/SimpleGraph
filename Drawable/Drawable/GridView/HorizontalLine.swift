@@ -20,7 +20,7 @@ class HorizontalLine : Line {
         let width = self.frame.width
         let height : CGFloat = 1.0
         self.frame = CGRect(x: x, y: y, width: width, height: height)
-        self.backgroundColor = UIView.theme.lineColor
+        self.backgroundColor = UIView.theme.systemLineColor
         super.adjustFrame(padding: padding)
     }
     

@@ -29,6 +29,7 @@ class Line : UIView {
     }
     
     var position : Int = 0
+    var padding : CGFloat = 0.0
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,6 +49,7 @@ class Line : UIView {
     }
     
     func adjustFrame(padding: CGFloat) {
+        self.padding = padding
         self.textLabel.adjustDirection(direction: self.direction)
     }
     

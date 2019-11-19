@@ -20,7 +20,9 @@ public class Backend : BondProvider {
         data.append(BondImpl(identifier: "def-egs-234-122"))
         data.append(BondImpl(identifier: "afe-4t4-asd-3gg"))
         data.append(BondImpl(identifier: "56y-32r-ad3-5y3"))
-        completion(data)
+        DispatchQueue.main.async {
+            completion(data)
+        }
     }
     
     public func bondData(_ bond: Bond, completion: @escaping ([BondData]) -> Void) {
@@ -41,7 +43,9 @@ public class Backend : BondProvider {
         data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 5.0))
         dateComps.day = 7
         data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 12.0))
-        completion(data)
+        DispatchQueue.main.async {
+            completion(data)
+        }
     }
     
 }

@@ -18,6 +18,7 @@
 		C99E2DD2238435C600553430 /* TextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2DCC238435C600553430 /* TextLabel.swift */; };
 		C99E2DD4238435D400553430 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2DD3238435D400553430 /* PickerView.swift */; };
 		C99E2DD72384382000553430 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2DD62384382000553430 /* Theme.swift */; };
+		C99E2E822384819E00553430 /* Interfaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2E812384819E00553430 /* Interfaces.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		C99E2DCC238435C600553430 /* TextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLabel.swift; sourceTree = "<group>"; };
 		C99E2DD3238435D400553430 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		C99E2DD62384382000553430 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		C99E2E812384819E00553430 /* Interfaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Interfaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C99E2E822384819E00553430 /* Interfaces.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +75,7 @@
 				C99E2D1E2383488500553430 /* Drawable */,
 				C99E2D292383488500553430 /* DrawableTests */,
 				C99E2D1D2383488500553430 /* Products */,
+				C99E2E802384819E00553430 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,9 +112,9 @@
 		C99E2DC5238435C600553430 /* GridView */ = {
 			isa = PBXGroup;
 			children = (
-				C99E2DC6238435C600553430 /* HorizontalLine.swift */,
 				C99E2DC7238435C600553430 /* GridModel.swift */,
 				C99E2DC8238435C600553430 /* Line.swift */,
+				C99E2DC6238435C600553430 /* HorizontalLine.swift */,
 				C99E2DC9238435C600553430 /* VerticalLine.swift */,
 				C99E2DCA238435C600553430 /* GridView.swift */,
 			);
@@ -132,6 +136,14 @@
 				C99E2DD62384382000553430 /* Theme.swift */,
 			);
 			path = Theme;
+			sourceTree = "<group>";
+		};
+		C99E2E802384819E00553430 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C99E2E812384819E00553430 /* Interfaces.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
