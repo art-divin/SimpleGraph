@@ -22,17 +22,28 @@
                                     <constraint firstAttribute="height" constant="342" id="iiK-xX-zuv"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-By-BEu" customClass="PickerView" customModule="Drawable">
+                                <rect key="frame" x="20" y="481" width="374" height="42"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="ZbH-ce-zS7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hsZ-wX-5Lh" secondAttribute="trailing" constant="20" id="6o0-ya-EbP"/>
                             <constraint firstItem="hsZ-wX-5Lh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9vY-AT-bBr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mf6-By-BEu" secondAttribute="trailing" constant="20" id="BjL-nq-ZIC"/>
+                            <constraint firstItem="mf6-By-BEu" firstAttribute="top" secondItem="hsZ-wX-5Lh" secondAttribute="bottom" constant="-1" id="KZm-DK-VcO"/>
+                            <constraint firstItem="mf6-By-BEu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="SCK-be-VRt"/>
                             <constraint firstItem="hsZ-wX-5Lh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="96" id="slk-tb-1Za"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="gridView" destination="hsZ-wX-5Lh" id="la5-TB-g97"/>
+                        <outlet property="pickerView" destination="mf6-By-BEu" id="ygm-BS-V4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
