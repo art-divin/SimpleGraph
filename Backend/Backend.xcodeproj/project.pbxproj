@@ -15,6 +15,8 @@
 		C99E2E5E23845D2B00553430 /* BondDataImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E5D23845D2B00553430 /* BondDataImpl.swift */; };
 		C99E2E6123845D3900553430 /* Interfaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2E6023845D3900553430 /* Interfaces.framework */; };
 		C99E2E862384B28F00553430 /* DataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E852384B28F00553430 /* DataGenerator.swift */; };
+		C9B530B3238521D400DB4BF1 /* DataGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B530B2238521D400DB4BF1 /* DataGeneratorTests.swift */; };
+		C9B530B52385232100DB4BF1 /* IntTimePeriodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B530B42385232100DB4BF1 /* IntTimePeriodTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		C99E2E5D23845D2B00553430 /* BondDataImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BondDataImpl.swift; sourceTree = "<group>"; };
 		C99E2E6023845D3900553430 /* Interfaces.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Interfaces.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C99E2E852384B28F00553430 /* DataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGenerator.swift; sourceTree = "<group>"; };
+		C9B530B2238521D400DB4BF1 /* DataGeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGeneratorTests.swift; sourceTree = "<group>"; };
+		C9B530B42385232100DB4BF1 /* IntTimePeriodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTimePeriodTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				C99E2E1023844F3100553430 /* BackendTests.swift */,
+				C9B530B2238521D400DB4BF1 /* DataGeneratorTests.swift */,
+				C9B530B42385232100DB4BF1 /* IntTimePeriodTests.swift */,
 				C99E2E1223844F3100553430 /* Info.plist */,
 			);
 			path = BackendTests;
@@ -240,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99E2E1123844F3100553430 /* BackendTests.swift in Sources */,
+				C9B530B52385232100DB4BF1 /* IntTimePeriodTests.swift in Sources */,
+				C9B530B3238521D400DB4BF1 /* DataGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
