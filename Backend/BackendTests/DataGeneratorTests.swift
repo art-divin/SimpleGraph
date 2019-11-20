@@ -46,4 +46,10 @@ class DataGeneratorTests: XCTestCase {
         XCTAssertEqual(data.count, 25)
     }
 
+    func testGenerateBondsAtLeastOne() {
+        let generator = DataGenerator()
+        let bonds = generator.generateBonds()
+        XCTAssertGreaterThanOrEqual(bonds.count, 1)
+    }
+    
 }

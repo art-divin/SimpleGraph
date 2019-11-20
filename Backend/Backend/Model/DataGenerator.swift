@@ -10,6 +10,14 @@ import Interfaces
 
 class DataGenerator {
     
+    func generateBonds() -> [Bond] {
+        var data : [Bond] = []
+        for _ in 1 ... Int.random(in: 2 ... 20) {
+            data.append(BondImpl(identifier: NSUUID().uuidString))
+        }
+        return data
+    }
+    
     func generate(bond: Bond, span: Int) -> [BondData] {
         var data : [BondData] = []
         let calendar = NSCalendar.current

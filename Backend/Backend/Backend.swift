@@ -16,12 +16,7 @@ public class Backend : BondProvider {
     }
     
     public func bonds(completion: @escaping ([Bond]) -> Void) {
-        var data : [Bond] = []
-        // TODO: put to data generator
-        data.append(BondImpl(identifier: "asd-asd-asd-asd"))
-        data.append(BondImpl(identifier: "def-egs-234-122"))
-        data.append(BondImpl(identifier: "afe-4t4-asd-3gg"))
-        data.append(BondImpl(identifier: "56y-32r-ad3-5y3"))
+        let data = self.generator.generateBonds()
         DispatchQueue.main.async {
             completion(data)
         }
