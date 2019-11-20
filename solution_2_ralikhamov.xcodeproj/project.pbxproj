@@ -16,6 +16,8 @@
 		C99E2E6A238461B900553430 /* NSObject+Combiner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E69238461B900553430 /* NSObject+Combiner.swift */; };
 		C99E2E7E2384698800553430 /* BondListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E7C2384698800553430 /* BondListViewController.swift */; };
 		C99E2E7F2384698800553430 /* BondDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E7D2384698800553430 /* BondDataViewController.swift */; };
+		C99E2E872384C72400553430 /* Interfaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2E5323844FDB00553430 /* Interfaces.framework */; };
+		C99E2E882384C72400553430 /* Interfaces.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2E5323844FDB00553430 /* Interfaces.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C9CB3B852383450800EC8844 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB3B842383450800EC8844 /* AppDelegate.swift */; };
 		C9CB3B8C2383450800EC8844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CB3B8A2383450800EC8844 /* Main.storyboard */; };
 		C9CB3B8E2383450900EC8844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CB3B8D2383450900EC8844 /* Assets.xcassets */; };
@@ -98,6 +100,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C99E2DC22384199F00553430 /* Drawable.framework in Embed Frameworks */,
+				C99E2E882384C72400553430 /* Interfaces.framework in Embed Frameworks */,
 				C99E2E2623844F3B00553430 /* Backend.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -134,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C99E2DC12384199F00553430 /* Drawable.framework in Frameworks */,
+				C99E2E872384C72400553430 /* Interfaces.framework in Frameworks */,
 				C99E2E2523844F3B00553430 /* Backend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,9 +11,10 @@ import Foundation
 public protocol BondData {
     
     var date : Date { get }
-    var value : Double { get }
+    var value : NSDecimalNumber { get }
+    var amount : NSDecimalNumber { get }
     var bond : Bond { get }
     
-    init(bond: Bond, date: Date, value: Double)
+    init(bond: Bond, date: Date, value: NSDecimalNumber, amount: NSDecimalNumber)
     
 }

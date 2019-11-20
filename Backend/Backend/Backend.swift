@@ -10,6 +10,8 @@ import Interfaces
 
 public class Backend : BondProvider {
     
+    private var generator = DataGenerator()
+    
     public init() {
     }
     
@@ -26,23 +28,7 @@ public class Backend : BondProvider {
     }
     
     public func bondData(_ bond: Bond, span: Int, completion: @escaping ([BondData]) -> Void) {
-        var data : [BondData] = []
-        // TODO: put to data generator
-        var dateComps = NSCalendar.current.dateComponents(in: TimeZone.current, from: Date())
-        dateComps.day = 1
-        data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 1.0))
-        dateComps.day = 2
-        data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 5.0))
-        dateComps.day = 3
-        data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 6.0))
-        dateComps.day = 4
-        data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 2.0))
-        dateComps.day = 5
-        data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 3.0))
-        dateComps.day = 6
-        data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 5.0))
-        dateComps.day = 7
-        data.append(BondDataImpl(bond: bond, date: dateComps.date!, value: 12.0))
+        let data = self.generator.generate(bond: bond, span: span)
         DispatchQueue.main.async {
             completion(data)
         }

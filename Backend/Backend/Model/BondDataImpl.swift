@@ -11,13 +11,15 @@ import Interfaces
 class BondDataImpl : BondData {
     
     var date: Date
-    var value: Double
+    var value: NSDecimalNumber
     var bond: Bond
+    var amount : NSDecimalNumber
     
-    required init(bond: Bond, date: Date, value: Double) {
+    required init(bond: Bond, date: Date, value: NSDecimalNumber, amount: NSDecimalNumber) {
         self.bond = bond
         self.date = date
         self.value = value
+        self.amount = amount
     }
     
 }

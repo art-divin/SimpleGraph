@@ -20,7 +20,7 @@ public class PickerModel {
     
 }
 
-class PickerButton : UIButton {
+public class PickerButton : UIButton {
     
     var data : Int = 0
     
@@ -78,9 +78,10 @@ public class PickerView : UIView {
         guard let model = self.model else {
             fatalError("model was not set!")
         }
-        let padding = ceil(self.frame.width / CGFloat(model.objects.count))
+        let margin : CGFloat = 15.0
+        let padding = ceil((self.frame.width - margin * 2) / CGFloat(model.objects.count))
         for (idx, object) in model.objects.enumerated() {
-            let x = padding * 0.5 + padding * CGFloat(idx)
+            let x = margin + padding * CGFloat(idx)
             let y : CGFloat = self.frame.height * 0.5
             let center = CGPoint(x: x, y: y)
             let width : CGFloat = 25.0

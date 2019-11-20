@@ -21,10 +21,12 @@ public class GridModel {
     private var vertical : [String] = []
     
     private var bondData : [BondData]
+    private var usesAmount : Bool = false
     
     var max : Double = 0.0
     
-    public init(bondData: [BondData]) {
+    public init(bondData: [BondData], usesAmount: Bool) {
+        self.usesAmount = usesAmount
         self.bondData = bondData
         self.processData()
     }
@@ -33,9 +35,9 @@ public class GridModel {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM"
         self.vertical = self.bondData.map { dateFormatter.string(from: $0.date) }
-        let sorted = Array(Set(self.bondData.map { $0.value })).sorted(by: { $0 > $1 })
+        let sorted = Array(Set(self.bondData.map { Int(self.usesAmount ? $0.amount.doubleValue : $0.value.doubleValue) })).sorted(by: { $0 > $1 })
         self.horizontal = sorted.map { "\($0)" }
-        self.max = sorted.first ?? 0.0
+        self.max = Double(sorted.first ?? 0)
     }
 
     private func construct<Drawable: Line>(from: [String], frame: CGRect, drawable: Drawable.Type) -> [Drawable] {
@@ -56,7 +58,7 @@ public class GridModel {
     func verticalLines(frame: CGRect) -> [VerticalLine] {
         let lines = self.construct(from: self.vertical, frame: frame, drawable: VerticalLine.self)
         for (idx, line) in lines.enumerated() {
-            line.value = self.bondData[idx].value
+            line.value = self.usesAmount ? self.bondData[idx].amount : self.bondData[idx].value
         }
         return lines
     }

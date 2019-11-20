@@ -19,6 +19,7 @@ public class GridView : UIView {
         }
     }
     
+    private var shapeLayer : CAShapeLayer?
     private var verticalLines : [VerticalLine] = []
     private var horizontalLines : [HorizontalLine] = []
     
@@ -48,6 +49,7 @@ public class GridView : UIView {
         self.horizontalLines.append(contentsOf: model.horizontalLines(frame: self.frame))
         self.verticalLines.forEach { self.insertSubview($0, at: 0) }
         self.horizontalLines.forEach { self.insertSubview($0, at: 0) }
+        self.setNeedsLayout()
     }
     
     private func drawLines(_ lines: [Line], padding: CGFloat) {
@@ -61,8 +63,8 @@ public class GridView : UIView {
         let verticalCount = CGFloat(self.verticalLines.count)
         let horizontalCount = CGFloat(self.horizontalLines.count)
         let lineWidth : CGFloat = 1.0
-        let horizontalPadding : CGFloat = ceil(self.frame.width / verticalCount) - verticalCount * lineWidth
-        let verticalPadding : CGFloat = ceil(self.frame.height / horizontalCount) - horizontalCount * lineWidth
+        let horizontalPadding : CGFloat = ceil(self.frame.width / verticalCount)// - verticalCount * lineWidth
+        let verticalPadding : CGFloat = ceil(self.frame.height / horizontalCount)// - horizontalCount * lineWidth
 
         self.drawLines(self.verticalLines, padding: horizontalPadding)
         self.drawLines(self.horizontalLines, padding: verticalPadding)
@@ -75,6 +77,7 @@ public class GridView : UIView {
         guard let first = points.first else {
             return
         }
+        self.shapeLayer?.removeFromSuperlayer()
         points.remove(at: 0)
         let path = CGMutablePath()
         path.move(to: first)
@@ -85,6 +88,7 @@ public class GridView : UIView {
         shapeLayer.lineCap = .round
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.strokeColor = UIView.theme.curveLineColor.cgColor
+        self.shapeLayer = shapeLayer
         self.layer.addSublayer(shapeLayer)
     }
     

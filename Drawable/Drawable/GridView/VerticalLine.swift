@@ -10,12 +10,12 @@ import UIKit
 
 class VerticalLine : Line {
     
-    var value : Double = 0.0 {
+    var value : NSDecimalNumber = 0.0 {
         didSet {
             let formatter = NumberFormatter()
             formatter.maximumFractionDigits = 1
             formatter.minimumFractionDigits = 1
-            self.valueLabel.text = formatter.string(from: NSNumber(value: self.value))
+            self.valueLabel.text = formatter.string(from: self.value)
         }
     }
     
@@ -40,17 +40,11 @@ class VerticalLine : Line {
     }
     
     func valuePoint(max: Double) -> CGPoint {
-        let ratio = CGFloat(self.value / max)
-        var pointY : CGFloat = 0.0
-        if ratio < 1 {
-            var padding = self.padding
-            if ratio < 0.1 {
-                padding *= 0.5
-            }
-            pointY = ceil(self.frame.height - ratio * (self.frame.height + self.padding * 2)) - padding
-        } else {
-            pointY = self.padding * 0.5
-        }
+        let ratio = CGFloat(self.value.doubleValue / max)
+        let originalHeight = self.frame.height
+        var height = originalHeight
+        height -= self.padding * 0.5
+        let pointY : CGFloat = height - height * ratio
         self._valuePoint = CGPoint(x: self.minPoint.x, y: pointY)
         return self._valuePoint!
     }
