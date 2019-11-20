@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C99E2E0C23844F3100553430 /* Backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C99E2E0223844F3100553430 /* Backend.framework */; };
-		C99E2E1123844F3100553430 /* BackendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E1023844F3100553430 /* BackendTests.swift */; };
 		C99E2E1323844F3100553430 /* Backend.h in Headers */ = {isa = PBXBuildFile; fileRef = C99E2E0523844F3100553430 /* Backend.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C99E2E2823844F7200553430 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E2723844F7200553430 /* Backend.swift */; };
 		C99E2E5C23845D1F00553430 /* BondImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99E2E5B23845D1F00553430 /* BondImpl.swift */; };
@@ -34,7 +33,6 @@
 		C99E2E0523844F3100553430 /* Backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Backend.h; sourceTree = "<group>"; };
 		C99E2E0623844F3100553430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99E2E0B23844F3100553430 /* BackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C99E2E1023844F3100553430 /* BackendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendTests.swift; sourceTree = "<group>"; };
 		C99E2E1223844F3100553430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C99E2E2723844F7200553430 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		C99E2E5B23845D1F00553430 /* BondImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BondImpl.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		C99E2E0F23844F3100553430 /* BackendTests */ = {
 			isa = PBXGroup;
 			children = (
-				C99E2E1023844F3100553430 /* BackendTests.swift */,
 				C9B530B2238521D400DB4BF1 /* DataGeneratorTests.swift */,
 				C9B530B42385232100DB4BF1 /* IntTimePeriodTests.swift */,
 				C99E2E1223844F3100553430 /* Info.plist */,
@@ -245,7 +242,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C99E2E1123844F3100553430 /* BackendTests.swift in Sources */,
 				C9B530B52385232100DB4BF1 /* IntTimePeriodTests.swift in Sources */,
 				C9B530B3238521D400DB4BF1 /* DataGeneratorTests.swift in Sources */,
 			);
